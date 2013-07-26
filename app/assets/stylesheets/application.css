@@ -10,4 +10,102 @@
  *
  *= require_self
  *= require_tree .
- */
+*/
+
+
+body {
+	margin: 0;
+	background-color: #303030;
+	color: #ccc;
+}
+
+h1 {
+ margin: 0;
+}
+header {
+	border-bottom: dotted 1px #999;
+}
+
+div#main-content {
+	width: 1000px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #353535;	
+}
+
+.header-content {
+	width: 1000px;
+	height: 58px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	float: left;
+	margin: 0;
+	padding: 5px 0;
+	height:48px;
+
+}
+
+
+#logo img {
+	width: 48px;
+	height: 48px;
+}
+
+nav {
+	float: left;
+	vertical-align: middle;
+
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;	
+	color: #ccc;
+	height: 100%;
+	line-height:58px;
+	text-align:middle;
+	padding: 0 10px;
+}
+
+.sign-in {
+	float: right;
+}
+
+a.about:hover {
+	background-color: #F7B42C;
+	color: #FDF0D5;
+}
+
+a.contact:hover {
+	background-color: #FC575E;
+	color: #FEDDDF;
+}
+
+a.home:hover {
+	background-color: #90D5EC;
+	color: #E9F7FB;
+}
+
+a.sign-in:hover {
+  background-color: #AAD450;
+	color: #FDF0D5;
+
+}
+
+
+
+ 
