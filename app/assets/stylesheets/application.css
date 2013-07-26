@@ -13,15 +13,8 @@
 */
 
 
-body {
-	margin: 0;
-	background-color: #303030;
-	color: #ccc;
-}
+/*---------header style-----------------*/
 
-h1 {
- margin: 0;
-}
 header {
 	border-bottom: dotted 1px #999;
 }
@@ -76,9 +69,10 @@ a {
 	display: inline-block;	
 	color: #ccc;
 	height: 100%;
-	line-height:58px;
-	text-align:middle;
+	line-height: 58px;
+	text-align: middle;
 	padding: 0 10px;
+  margin: 0;
 }
 
 .sign-in {
@@ -103,8 +97,19 @@ a.home:hover {
 a.sign-in:hover {
   background-color: #AAD450;
 	color: #FDF0D5;
-
 }
+
+
+body {
+	margin: 0;
+	background-color: #303030;
+	color: #ccc;
+}
+
+h1 {
+ margin: 0;
+}
+
 
 
 
