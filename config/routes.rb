@@ -2,9 +2,8 @@ Tongo::Application.routes.draw do
   
   root to: 'static_pages#home'
 
-  get 'users/new'
 
-  match '/signup',  to: 'users#new', via: 'get'
+  resources :users
 
   match '/signin',  to: 'static_pages#sign_in', via: 'get'  
   match '/contact', to: 'static_pages#contact', via: 'get'
