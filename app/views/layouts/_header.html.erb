@@ -8,7 +8,12 @@
         </li><li><%= link_to "home", root_path, class: "home" %></li>
         </ul>
       </nav>
-      <%= link_to "sign-in", signin_path, class: "sign-in" %>
+
+      <% if signed_in? %>
+        <%= link_to "sign out", signout_path, class: "sign-in" %>
+      <% else %>
+        <%= link_to "sign in", signin_path, class: "sign-in" %>
+      <% end %>
     </div>
   </div>
 </header>
