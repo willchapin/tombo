@@ -10,7 +10,10 @@
     <![endif]-->
   </head>
   <body>
-    <%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
+
+  <%= render 'shared/show_flash'%>
+
     <div id = "main-content">
       <%= yield %>
     </div>
