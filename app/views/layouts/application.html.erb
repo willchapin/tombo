@@ -10,22 +10,10 @@
     <![endif]-->
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <%= link_to image_tag("logo.png", alt: "tombo_logo"), root_path, id: "logo" %>
-          <nav>
-            <ul>
-              <li><%= link_to "about", about_path, class: "about" %>
-            </li><li><%= link_to "contact", contact_path, class: "contact" %>
-            </li><li><%= link_to "home", root_path, class: "home" %></li>
-            </ul>
-          </nav>
-          <%= link_to "sign-in", signin_path, class: "sign-in" %>
-        </div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div id = "main-content">
       <%= yield %>
-    </div>  
+    </div>
+    <%= debug(params) if Rails.env.development?%>
   </body>
 </html>
