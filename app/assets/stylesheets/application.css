@@ -25,6 +25,7 @@ div#main-content {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #353535;	
+	padding-top: 9px;
 }
 
 .header-content {
@@ -99,6 +100,23 @@ a.sign-in:hover {
 	color: #FDF0D5;
 }
 
+/*------- sign in up------------*/
+
+label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+div.form-element {
+	margin: 10px 10px 10px 0;
+}
+
+div#sign-in-up-inner {
+	width: 217px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 
 body {
 	margin: 0;
@@ -107,10 +125,29 @@ body {
 }
 
 h1 {
- margin: 0;
+  margin: 0;	
 }
 
+.button {
+  width: 134px;
+  height: 25px;
+  padding-bottom: 4px;
+  margin-top: 5px;
+  background-color: #FC575E;
+  color: #FEDDDF;
+  font-size: 0.8em;
+  text-decoration:none;
+  border: none;
+}
 
+/*--------------errors-------------*/
 
+.errors {
+  padding: 0;
+  list-style-type: disc;
+  color: #FC575E;
+}
 
- 
+.errors li {
+  list-style: 
+}
