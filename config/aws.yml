@@ -1,0 +1,14 @@
+development:
+  bucket: tombo 
+  access_key_id: AKIAJ2QHDNWRHM2K273Q
+  secret_access_key: 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
+
+production:
+  bucket: tombo
+  access_key_id: AKIAJ2QHDNWRHM2K273Q
+  secret_access_key: 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
+
+test:
+  bucket: tombo
+  access_key_id: AKIAJ2QHDNWRHM2K273Q
+  secret_access_key: 8Suhl

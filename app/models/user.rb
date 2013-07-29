@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   after_validation { errors.delete(:password_digest) }
   has_secure_password
 
+  has_many :tracks, dependent: :destroy
+
 
   private
     def create_remember_token

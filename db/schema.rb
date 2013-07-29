@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729190314) do
+ActiveRecord::Schema.define(:version => 20130729213839) do
+
+  create_table "tracks", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "track_file_file_name"
+    t.string   "track_file_content_type"
+    t.integer  "track_file_file_size"
+    t.datetime "track_file_updated_at"
+  end
+
+  add_index "tracks", ["user_id", "created_at"], :name => "index_tracks_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"

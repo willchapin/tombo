@@ -4,6 +4,9 @@ gem 'rails', '3.2.13'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker'
 gem 'will_paginate'
+gem 'paperclip'
+gem 'aws-sdk'
+
 
 
 # Bundle edge Rails instead:

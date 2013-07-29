@@ -1,3 +1,7 @@
+<% if signed_in? %>
+  <%= render 'static_pages/user_home' %>
+<% else %>
 <h1>Tombo</h1>
-<%= link_to "sign up!", new_user_path, class: "sign-up-button" %>
-<%= link_to "sign in!", signin_path, class: "sign-in-button" %>
+  <%= link_to "sign up!", new_user_path, class: "sign-up-button" %>
+  <%= link_to "sign in!", signin_path, class: "sign-in-button" %>
+<% end %>
