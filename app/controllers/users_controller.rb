@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :authorized, only: [:edit, :update]
+
   def new
     @user = User.new
   end
@@ -17,5 +20,25 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profile updated!"
+      redirect_to @user
+    else 
+      render 'edit'
+    end
+  end
+
+  private
+
+    def authorized
+      @user = User.find(params[:id])
+      redirect_to root_path unless current_user?(@user)
+    end
 
 end
