@@ -21,7 +21,7 @@ header {
 
 div#main-content {
 	width: 1000px;
-	height: 600px;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #353535;	
@@ -152,7 +152,33 @@ input.button {
   border: none;
 }
 
-/*--------------errors-------------*/
+
+/*--users index---------------*/
+
+.pagination-wrapper {
+  width:100%;
+  text-align: center;
+}
+
+ul.users {
+  padding: 0 40px 0 40px;
+}
+
+ul.users li {
+  margin-top: 15px;
+  border-bottom: 1px solid #FC575E
+}
+
+ul.users li a {
+  height: 1.1em;
+  padding: 0;
+}
+
+.pagination {
+  display: inline-block; 
+}
+
+/*--errors--------------------*/
 
 .errors {
   padding: 0;

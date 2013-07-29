@@ -1,0 +1,14 @@
+<% provide(:title, "Users") %>
+<h1>Users</h1>
+<div class = "users-wrapper">
+  <div class = "pagination-wrapper">
+    <%= will_paginate %>
+  </div>
+  <ul class= "users">
+    <%= render @users  %>
+  </ul>
+  <div class = "pagination-wrapper">
+    <%= will_paginate %>
+  </div>
+
+</div>
