@@ -5,7 +5,7 @@
         <ul>
           <li><%= link_to "about", about_path, class: "orange" %>
         </li><li><%= link_to "contact", contact_path, class: "red" %>
-        </li><li><%= link_to "users", users_path, class: "blue" %></li>
+      </li><li><%= link_to("users", users_path, class: "blue") if signed_in? %></li>
         </ul>
       </nav>
 
