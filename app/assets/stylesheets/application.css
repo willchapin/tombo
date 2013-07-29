@@ -76,26 +76,26 @@ a {
   margin: 0;
 }
 
-.sign-in {
+.pull-right {
 	float: right;
 }
 
-a.about:hover {
+a.orange:hover {
 	background-color: #F7B42C;
 	color: #FDF0D5;
 }
 
-a.contact:hover {
+a.red:hover {
 	background-color: #FC575E;
 	color: #FEDDDF;
 }
 
-a.home:hover {
+a.blue:hover {
 	background-color: #90D5EC;
 	color: #E9F7FB;
 }
 
-a.sign-in:hover {
+a.green:hover {
   background-color: #AAD450;
 	color: #FDF0D5;
 }

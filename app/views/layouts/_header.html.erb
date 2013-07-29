@@ -3,16 +3,16 @@
     <%= link_to image_tag("logo.png", alt: "tombo_logo"), root_path, id: "logo" %>
       <nav>
         <ul>
-          <li><%= link_to "about", about_path, class: "about" %>
-        </li><li><%= link_to "contact", contact_path, class: "contact" %>
-        </li><li><%= link_to "home", root_path, class: "home" %></li>
+          <li><%= link_to "about", about_path, class: "orange" %>
+        </li><li><%= link_to "contact", contact_path, class: "red" %>
+        </li><li><%= link_to "home", root_path, class: "blue" %></li>
         </ul>
       </nav>
 
       <% if signed_in? %>
-        <%= link_to "sign out", signout_path, class: "sign-in" %>
+        <%= link_to "sign out", signout_path, class: "green pull-right" %>
       <% else %>
-        <%= link_to "sign in", signin_path, class: "sign-in" %>
+        <%= link_to "sign in", signin_path, class: "green pull-right" %>
       <% end %>
     </div>
   </div>
