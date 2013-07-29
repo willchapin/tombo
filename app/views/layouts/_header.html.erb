@@ -10,7 +10,9 @@
       </nav>
 
       <% if signed_in? %>
-        <%= link_to "sign out", signout_path, class: "green pull-right" %>
+        <%= link_to "sign out", signout_path, class: "purple pull-right" %>
+        <%= link_to "my profile", current_user, class: "green pull-right" %>
+
       <% else %>
         <%= link_to "sign in", signin_path, class: "green pull-right" %>
       <% end %>

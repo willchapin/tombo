@@ -100,6 +100,13 @@ a.green:hover {
 	color: #FDF0D5;
 }
 
+a.purple:hover {
+  background-color: #657DAF;
+	color: #E9F7FB;
+}
+
+
+
 /*------- sign in up------------*/
 
 label {
