@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker'
 gem 'will_paginate'
-gem 'paperclip'
+gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 
 

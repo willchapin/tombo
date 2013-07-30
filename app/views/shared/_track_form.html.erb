@@ -1,11 +1,10 @@
-<%= form_for(@track) do |f| %>
-  <%= render 'shared/error_messages', object: @track %>
-  <div class = "field">
+<%= form_for @track do |f| %>
+  <div class = "form-element">
     <%= f.label :title %>
     <%= f.text_field :title %>
   <div>
 
-  <div class = "field">
+  <div class = "form-element">
     <%= f.label :track_file %>
     <%= f.file_field :track_file %>
   <div>

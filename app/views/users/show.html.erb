@@ -3,4 +3,13 @@
 <%= gravatar_for @user %>
 <%= @user.name %>
 </h1>
+<div class = "audio-wrap">
+  <ul class = "audio">
+  <% if @user.tracks.any? %>
+    <% @user.tracks.each do |track| %>
+      <%= render 'tracks/track', track: track.track_file %>
+    <% end %>
+  <% end %>
+  </ul>
+</div>
 
