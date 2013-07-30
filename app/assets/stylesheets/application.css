@@ -131,6 +131,7 @@ a.purple:hover {
 
 div.dropdown {
   float:right;
+  position: relative;
 }
 
 ul.dropdown {
@@ -140,7 +141,10 @@ ul.dropdown {
 }
 
 ul.show {
+  position: absolute;
   display: block;
+  top: 58px;
+  right: 0;
 }
 
 ul.dropdown li a {
