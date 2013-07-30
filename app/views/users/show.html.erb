@@ -1,13 +1,15 @@
 <% provide(:title, @user.name) %>
-<h1>
-<%= gravatar_for @user %>
-<%= @user.name %>
-</h1>
+<div class = "sidebar">
+  <h1 class = "pull-left">
+  <%= gravatar_for @user, size: 100 %>
+  <%= @user.name %>
+  </h1>
+</div>
 <div class = "audio-wrap">
   <ul class = "audio">
   <% if @user.tracks.any? %>
     <% @user.tracks.each do |track| %>
-      <%= render 'tracks/track', track: track.track_file %>
+      <%= render 'tracks/track', track: track %>
     <% end %>
   <% end %>
   </ul>

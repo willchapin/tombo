@@ -13,6 +13,29 @@
 */
 
 
+body {
+	margin: 0;
+	background-color: #303030;
+	color: #eee;
+}
+
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;	
+  text-align: center;
+}
+
+h1.pull-left {
+  margin: 0;	
+  text-align: left;
+}
+
+h1 img {
+  vertical-align: text-top;
+}
+
+
 /*---------header style-----------------*/
 
 header {
@@ -25,7 +48,7 @@ div#main-content {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #353535;	
-	padding-top: 9px;
+	padding-top: 25px;
 }
 
 .header-content {
@@ -68,7 +91,7 @@ nav li {
 a {
 	text-decoration: none;
 	display: inline-block;	
-	color: #ccc;
+	color: #eee;
 	height: 100%;
 	line-height: 58px;
 	text-align: middle;
@@ -106,8 +129,26 @@ a.purple:hover {
 }
 
 
+/*------- user profile ------------*/
+.sidebar {
 
-/*------- sign in up------------*/
+  width: 300px;
+  float: left;
+  height: 800px;
+}
+
+ul.audio {
+  padding: 0;
+}
+
+.audio-wrap {
+
+  float:left;
+
+}
+
+
+/*------- sign in up ------------*/
 
 label {
 	display: block;
@@ -126,18 +167,6 @@ label {
 	width: 300px;
 	margin-left:auto;
 	margin-right:auto;
-}
-
-
-body {
-	margin: 0;
-	background-color: #303030;
-	color: #ccc;
-}
-
-h1 {
-  margin: 0;	
-  text-align: center;
 }
 
 input.button {
@@ -184,6 +213,23 @@ ul.users li a {
   padding: 0;
   list-style-type: disc;
   color: #FC575E;
+}
+
+/*-- clear-fix --------------------*/
+
+
+/* For modern browsers */
+#main-content:before,
+#main-content:after {
+    content:"";
+    display:table;
+}
+#main-content:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+#main-content {
+    zoom:1;
 }
 
 

@@ -14,9 +14,11 @@
 
   <%= render 'shared/show_flash'%>
 
-    <div id = "main-content">
-      <%= yield %>
-    </div>
-    <%= debug(params) if Rails.env.development?%>
+  <div id = "main-content">
+    <%= yield %>
+  </div>
+  <%= render 'layouts/footer' %>
+
+  <%= debug(params) if Rails.env.development?%>
   </body>
 </html>
