@@ -6,9 +6,7 @@ class Track < ActiveRecord::Base
                     storage: :s3,
                     s3_credentials: File.join(Rails.root, 'config', 'aws.yml')
 
-
   belongs_to :user
-
   validates_attachment :track_file, presence: true,
     content_type: { content_type: 'audio/mpeg'  }
 
