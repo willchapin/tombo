@@ -34,4 +34,14 @@ Tongo::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # paperclip/aws settings 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => 'tombo',
+      :access_key_id => 'AKIAJ2QHDNWRHM2K273Q',
+      :secret_access_key => '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'
+    }
+  }
 end
