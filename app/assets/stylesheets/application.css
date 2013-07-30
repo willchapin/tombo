@@ -12,7 +12,6 @@
  *= require_tree .
 */
 
-
 body {
 	margin: 0;
 	background-color: #303030;
@@ -127,6 +126,31 @@ a.purple:hover {
   background-color: #657DAF;
 	color: #E9F7FB;
 }
+
+/*------- dropdown menu ------------*/
+
+div.dropdown {
+  float:right;
+}
+
+ul.dropdown {
+  padding: 0;
+  text-align: right;
+  display: none;
+}
+
+ul.show {
+  display: block;
+}
+
+ul.dropdown li a {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  border-bottom: 1px dotted #999;
+}
+
 
 
 /*------- user profile ------------*/

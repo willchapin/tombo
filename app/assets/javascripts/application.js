@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+
+
+  $(".dropdown-toggle").click(function(event){
+    $("ul.dropdown").toggleClass("show");
+    event.stopPropagation();
+  });
+
+
+  $('html').click(function(){
+    $("ul.dropdown").removeClass("show"); 
+  });
+
+
+
+});
