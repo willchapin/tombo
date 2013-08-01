@@ -221,15 +221,19 @@ ul.users {
   padding: 0 40px 0 40px;
 }
 
+
 ul.users li {
-  margin-top: 15px;
+  height: 58px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #FC575E
 }
 
 ul.users li a {
-  height: 1.1em;
+  height: 58px;
   padding: 0;
 }
+
+
 
 .pagination {
   display: inline-block; 
@@ -285,7 +289,7 @@ li.playing .play-pause {
 	display: none;
 }
 
-span {
+li.track span {
 	margin-left: 10px;
 	line-height: 30px;
 	font-family: Helvetica, Arial, sans-serif;
@@ -293,22 +297,19 @@ span {
 	vertical-align: center;
 }
 
-span.title {
+li.track span.title {
 }
 
-span.created_at {
+li.track span.created_at {
   font-style: italic;
   font-size: .8em;
+  font-weight: 100;
 }
 
-span.timer {
+li.track span.timer {
   float: right;
   font-size: .8em;
 }
-
-
-
-
 
 .progress-bar {
 	background-color: #aaa;
@@ -317,7 +318,7 @@ span.timer {
 	width: 500px;
 }
 
-.progress {
+li.track span.progress {
   margin: 0;
 	height: 15px;
 	width: 0;
