@@ -3,6 +3,9 @@
   <div class = "pause play-pause"></div>
   <span class = "title"><%= track.title %></span>
   <span class = "created_at">submitted <%= time_ago_in_words(track.created_at) %> ago.</span>
+  <% if track.user_id == current_user.id %>
+    <%= link_to "delete", track_path(track), class: "delete", method: :delete  %>
+  <% end %>
   <span class = "timer"></span> 
   <div class = "progress-bar"><span class = "progress"></span></div>
   <audio src= "<%= track.track_file.url %>"></audio>

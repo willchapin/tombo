@@ -335,9 +335,6 @@ li.track span {
 	vertical-align: center;
 }
 
-li.track span.title {
-}
-
 li.track span.created_at {
   font-style: italic;
   font-size: .8em;
@@ -349,11 +346,22 @@ li.track span.timer {
   font-size: .8em;
 }
 
+li.track a.delete {
+  line-height: 30px;
+  font-size: .8em;
+  font-weight: 100;
+  color: #FC575E;
+}
+
+li.track a.delete:hover {
+  color: #DC373E;
+}
+
 .progress-bar {
 	background-color: #aaa;
 	margin-top: 3px;
 	height: 15px;
-	width: 500px;
+	width: 650px;
 }
 
 li.track span.progress {
