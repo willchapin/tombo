@@ -235,6 +235,96 @@ ul.users li a {
   display: inline-block; 
 }
 
+/*-- tracks list --------------------*/
+
+ul.tracks {
+  margin: 0;
+  padding-left: 8px;
+  border-left: 1px solid #AAD450;
+}
+
+li.track {
+	list-style: none;	
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+li.track:hover {
+
+}
+
+li.track.playing {
+}
+
+
+
+.play-pause {
+	background-color: #555;
+	float:left;
+	width: 45px;
+	height: 30px;
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+
+.play-pause:hover {
+  background-color: #FC575E;
+}
+
+li.playing .play-pause {
+  background-color: #FC575E;
+}
+
+.play {
+	background-image: url('play.png');
+
+}
+
+.pause {
+	background-image: url('pause.png');
+	display: none;
+}
+
+span {
+	margin-left: 10px;
+	line-height: 30px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	vertical-align: center;
+}
+
+span.title {
+}
+
+span.created_at {
+  font-style: italic;
+  font-size: .8em;
+}
+
+span.timer {
+  float: right;
+  font-size: .8em;
+}
+
+
+
+
+
+.progress-bar {
+	background-color: #aaa;
+	margin-top: 3px;
+	height: 15px;
+	width: 500px;
+}
+
+.progress {
+  margin: 0;
+	height: 15px;
+	width: 0;
+	display: inline-block;
+	background-color: #A67;
+}
+
 /*--errors--------------------*/
 
 .errors {

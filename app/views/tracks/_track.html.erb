@@ -1,5 +1,11 @@
-<li>
-  <div><%= track.title %></div>
-  <audio src="<%= track.track_file.url %>" controls></audio>
+<li class = "track">
+  <div class = "play play-pause"></div>
+  <div class = "pause play-pause"></div>
+  <span class = "title"><%= track.title %></span>
+  <span class = "created_at">submitted <%= time_ago_in_words(track.created_at) %> ago.</span>
+  <span class = "timer"></span> 
+  <div class = "progress-bar"><span class = "progress"></span></div>
+  <audio src= "<%= track.track_file.url %>"></audio>
 </li>
+
 
