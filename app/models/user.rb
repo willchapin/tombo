@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 
   has_many :tracks, dependent: :destroy
 
+  def feed
+    Track.where("user_id = ?", id);
+  end
+
 
   private
     def create_remember_token

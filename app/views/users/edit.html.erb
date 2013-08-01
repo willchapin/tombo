@@ -1,7 +1,7 @@
 <% provide :title, "Update profile" %>
 <div id = "form-wrap">
   <h1>Update your profile</h1>
-  <%= form_for @user do |f| %>
+  <%= form_for @user , validate: true do |f| %>
     <%= render 'shared/error_messages' %>
 
     <div class="form-element">

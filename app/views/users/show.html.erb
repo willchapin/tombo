@@ -1,9 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class = "sidebar">
-  <h1 class = "pull-left">
-  <%= gravatar_for @user, size: 100 %>
-  <%= @user.name %>
-  </h1>
+  <%= render 'shared/user_info' %>
 </div>
 <div class = "audio-wrap">
   <ul class = "tracks">

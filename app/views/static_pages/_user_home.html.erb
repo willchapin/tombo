@@ -1,2 +1,14 @@
-<%= render 'shared/track_form' %>
+<div class = "sidebar">
+  <%= render 'shared/user_info' %>
+  <%= render 'shared/track_form' %>
+</div>
+<div class = "audio-wrap">
+  <ul class = "tracks">
+  <% if @user.feed.any? %>
+    <% @user.feed.each do |track| %>
+      <%= render 'tracks/track', track: track %>
+    <% end %>
+  <% end %>
+  </ul>
+</div>
 

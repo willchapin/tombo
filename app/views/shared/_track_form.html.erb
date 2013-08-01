@@ -1,13 +1,15 @@
+
+<h2>Add a track</h2>
 <%= form_for @track do |f| %>
   <div class = "form-element">
     <%= f.label :title %>
     <%= f.text_field :title %>
-  <div>
+  </div>
 
   <div class = "form-element">
     <%= f.label :track_file %>
     <%= f.file_field :track_file %>
-  <div>
+  </div>
   <%= f.submit "Post", class: "button" %>
 <% end %>
 
