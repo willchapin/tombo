@@ -8,6 +8,6 @@ class Track < ActiveRecord::Base
 
   belongs_to :user
   validates_attachment :track_file, presence: true,
-    content_type: { content_type: 'video/ogg' }
+    content_type: { content_type: /(video|audio)\/ogg/i }
 
 end

@@ -16,7 +16,7 @@
 
 $(document).ready(function(){
 
-  // header scripts ------------------------------------
+  // Header dropdown menu ------------------------------------
   $(".dropdown-toggle").click(function(event){
     $("ul.dropdown").toggleClass("show");
     event.stopPropagation();
@@ -28,7 +28,7 @@ $(document).ready(function(){
   });
 
 
-  // audio scripts -------------------------------------
+  // Audio player -------------------------------------
   
 	var tracks = $('audio');		
   
@@ -96,6 +96,8 @@ $(document).ready(function(){
     })
   }
 
-  initializeTimers();
+  //initializeTimers();
+
+
 
 });
