@@ -326,7 +326,52 @@ li.track span.progress {
 	background-color: #A67;
 }
 
-/*--errors--------------------*/
+
+/*-- pagination --------------------*/
+
+.pagination {
+  font-size: 0;
+  margin-top: 7px;
+  border-bottom: 1px solid #555;
+}
+
+.pagination a {
+  line-height: 30px;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;  
+  margin-left: 0;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+div.pagination em {
+  font-size: 15px;
+  display: inline-block;
+  font-style: normal;
+  padding: 0 10px;
+  line-height: 30px;
+  text-align: middle;
+}
+
+div.pagination em.current {
+  border: 1px solid #FC575E;  
+}
+
+.pagination a:hover {
+  border: 1px solid #AAD450;
+}
+
+.pagination span.disabled {
+  font-size: 15px;
+  color: #555;
+  display: inline-block;  
+  line-height: 30px;
+  padding: 0 10px;
+  
+  
+}
+
+/*-- errors --------------------*/
 
 .errors {
   padding: 0;
