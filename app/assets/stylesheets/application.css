@@ -199,7 +199,6 @@ ul.dropdown li a {
 }
 
 
-
 /*------- user profile ------------*/
 .sidebar {
   width: 285px;
@@ -276,9 +275,15 @@ label {
 	margin: 10px 10px 10px 0;
 }
 
-.form-element input {
+.form-element input.track {
   width: 279px;
 }
+
+.form-element input {
+  width: 294px;
+}
+
+
 
 #form-wrap {
 	width: 300px;
