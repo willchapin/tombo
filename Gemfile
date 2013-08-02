@@ -9,7 +9,6 @@ gem 'aws-sdk'
 gem 'client_side_validations'
 
 
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
