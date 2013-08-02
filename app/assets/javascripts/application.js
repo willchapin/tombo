@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require rails.validations
 //= require_tree .
 
 $(document).ready(function(){
@@ -98,6 +97,123 @@ $(document).ready(function(){
   }
 
   //initializeTimers();
+
+
+
+  // Form Validations
+
+  $("input[type='text']").blur(function(){
+
+    var $this = $(this);
+    var id = this.id
+
+    if (id == "user_name"){
+      validateName($this);
+
+    } else if (id == "user_email"){
+      validateEmail($this);
+
+    } else if (id == "user_password") {
+      validatePassword($this);
+
+    } else if (id == "user_password_confirmation") {
+      validateConfirmation($this);
+
+    }
+  });
+
+
+  function validateName(element){
+
+    var $error =  element.siblings(".error");
+
+    if (isEmpty(element.val())) {
+      $error.html("name must not be empty.");
+
+    } else if(element.val.length > 30) {
+      $error.html("name must not be more than 30 characters.");
+
+    } else {
+      $error.html("");
+    }
+  }
+
+  function validateEmail(element){
+
+    var $error =  element.siblings(".error");
+
+    if (isValidEmail(element.val())) {
+      $error.html("");
+
+    } else {
+      $error.html("invalid email");
+
+    } 
+
+  }
+
+  function validatePassword(element) {
+
+    var $error =  element.siblings(".error");
+
+    if (isValidPassword(element.val())) {
+      $error.html("");
+
+    } else {
+      $error.html("password must be 6 characters or more. no spaces");
+
+    } 
+
+
+  }
+
+
+  function validateConfirmation(element) {
+
+    var $error =  element.siblings(".error");
+
+    if (doesConfirmationMatch(element.val())) {
+      $error.html("");
+
+    } else {
+      $error.html("confirmation must match password");
+
+    } 
+
+  }
+
+  function isEmpty(val) {
+
+    var emptyString = /^\s*$/;
+    if (emptyString.test(val)) return true; 
+    else return false;
+
+  }
+
+  function isValidEmail(email) {
+
+    var validEmail = /^[a-z]\w*@[a-z]+\.[a-z]+$/i;
+
+    if (validEmail.test(email)) return true;
+    else return false;
+
+  }
+
+  function isValidPassword(password) {
+
+    if (password.length > 5 && password.indexOf(" ") == -1 ) return true;
+    else return false;
+
+  }
+
+  function doesConfirmationMatch(confirmation) {
+    var password = $('#user_password').val();
+    if (confirmation == password) return true;
+    else return false;
+    
+  }
+
+
 
 
 

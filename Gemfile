@@ -6,7 +6,6 @@ gem 'faker'
 gem 'will_paginate'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
-gem 'client_side_validations'
 
 
 # Bundle edge Rails instead:
