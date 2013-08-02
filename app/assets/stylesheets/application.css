@@ -17,6 +17,7 @@ body {
 	background-color: #303030;
 	color: #eee;
   font-family: "baskerville", serif;
+  font-weight: 100;
 }
 
 
@@ -27,8 +28,49 @@ h1 {
   text-align: center;
 }
 
+/*--------- landing -----------------*/
 
-/*---------header style-----------------*/
+h1.landing {
+  color: #fff;
+  font-size: 3em;
+}
+
+h3.landing {
+  font-weight: 100;
+  color: #ccc;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0;
+}
+
+img.logo-large {
+  display: block; 
+  margin: 15px auto;
+  width: 250px;
+  height: 250px;
+}
+
+
+.sign-up-button {
+  width: 150px;
+  line-height: 35px;
+  border: 1px solid #fff;
+  text-decoration:none;
+  margin: 3px;
+}
+
+.sign-up-button:hover {
+  border: 1px solid #FC575E;
+
+}
+
+
+.button-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*--------- header -----------------*/
 
 header {
 	border-bottom: dotted 1px #999;
@@ -135,6 +177,10 @@ ul.dropdown {
   padding: 0;
   text-align: right;
   display: none;
+  position: relative;
+  z-index: 999;
+  background-color: #303030;
+  border-top: 1px dotted #999;
 }
 
 ul.show {
