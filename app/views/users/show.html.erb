@@ -1,6 +1,11 @@
 <% provide(:title, @user.name) %>
 <div class = "sidebar">
   <%= render 'shared/user_info' %>
+  <% if current_user?(@user) && @user.bio.nil? %>
+    <%= link_to 'add a bio!', bio_path %>
+  <% else %>
+    <%= render 'shared/user_bio' %>
+  <% end %>
 </div>
 <div class = "audio-wrap">
   <ul class = "tracks">

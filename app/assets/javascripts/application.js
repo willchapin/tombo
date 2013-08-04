@@ -124,13 +124,13 @@ $(document).ready(function(){
 
 
   function validateName(element){
-
+    console.log(element.val());
     var $error =  element.siblings(".error");
 
     if (isEmpty(element.val())) {
       $error.html("name must not be empty.");
 
-    } else if(element.val.length > 30) {
+    } else if(element.val().length > 30) {
       $error.html("name must not be more than 30 characters.");
 
     } else {
@@ -139,6 +139,7 @@ $(document).ready(function(){
   }
 
   function validateEmail(element){
+    console.log(element.val());
 
     var $error =  element.siblings(".error");
 
@@ -153,6 +154,7 @@ $(document).ready(function(){
   }
 
   function validatePassword(element) {
+    console.log(element.val());
 
     var $error =  element.siblings(".error");
 
@@ -169,6 +171,7 @@ $(document).ready(function(){
 
 
   function validateConfirmation(element) {
+    console.log(element.val());
 
     var $error =  element.siblings(".error");
 
