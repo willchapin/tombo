@@ -192,7 +192,7 @@ $(document).ready(function(){
 
   function isValidEmail(email) {
 
-    var validEmail = /^[a-z]\w*@[a-z]+\.[a-z]+$/i;
+    var validEmail = /^[a-z][\w|\.]*@[a-z]+\.[a-z]+$/i;
 
     if (validEmail.test(email)) return true;
     else return false;
@@ -212,9 +212,5 @@ $(document).ready(function(){
     else return false;
     
   }
-
-
-
-
 
 });
