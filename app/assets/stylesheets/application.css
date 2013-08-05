@@ -51,6 +51,11 @@ h1 {
   text-align: center;
 }
 
+#form-wrap h1, #about-wrap h1 {
+  border-bottom: 1px solid #90D5EC; 
+  padding-bottom: 5px;
+}
+
 /*--------- landing -----------------*/
 
 h1.landing {
@@ -322,16 +327,10 @@ label {
 }
 
 
-#form-wrap {
+#form-wrap, #about-wrap {
 	width: 300px;
 	margin-left:auto;
 	margin-right:auto;
-}
-
-
-#form-wrap h1 {
-  border-bottom: 1px solid #90D5EC; 
-  padding-bottom: 5px;
 }
 
 .button {
