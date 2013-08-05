@@ -9,7 +9,8 @@ class TracksController < ApplicationController
       flash[:success] = "Upload Successfull!"
       redirect_to root_path
     else
-      render 'static_pages/home'
+      flash[:error] = "I'm sorry, please upload your track in .ogg format."
+      redirect_to root_path
     end
 
   end

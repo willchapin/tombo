@@ -1,0 +1,20 @@
+<% provide(:title, @title) %>
+<div class = "sidebar">
+  <%= render 'shared/user_info' %>
+  <%= render 'shared/stats' %>
+  <%= render 'shared/user_bio' %>
+</div>
+
+<div class = "show-follow-wrapper">
+  <h2><%= @title %></h2>
+  <div class = "pagination-wrapper">
+    <%= will_paginate %>
+  </div>
+  <ul class= "users">
+    <%= render @users  %>
+  </ul>
+  <div class = "pagination-wrapper">
+    <%= will_paginate %>
+  </div>
+
+</div>

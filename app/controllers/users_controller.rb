@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :authorized, only: [:edit, :update]
-  before_filter :signed_in_user, only: [:index]
+  before_filter :signed_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
   before_filter :admin_user, only: [:destroy]
 
   def new
@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      sign_in @user 
+      sign_in @user
       flash[:success] = "Tombo welcomes you!"
-      redirect_to @user
+      redirect_to root_path
     else 
       render 'new'
     end
@@ -46,15 +46,25 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
   private
 
     def authorized
       @user = User.find(params[:id])
       redirect_to root_path unless current_user?(@user)
-    end
-
-    def signed_in_user
-      redirect_to signin_path unless signed_in? 
     end
 
     def admin_user

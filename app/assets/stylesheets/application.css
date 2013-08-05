@@ -20,6 +20,29 @@ body {
   font-weight: 100;
 }
 
+a {
+	text-decoration: none;
+	color: #eee;
+	text-align: middle;
+	padding: 0 10px;
+  margin: 0;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+
+
+div#main-content {
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+  padding-bottom: 40px;
+	background-color: #353535;	
+	padding-top: 25px;
+}
 
 h1 {
   font-size: 1.3em;
@@ -52,6 +75,7 @@ img.logo-large {
 
 
 .sign-up-button {
+  display: inline-block;
   width: 150px;
   line-height: 35px;
   border: 1px solid #fff;
@@ -61,7 +85,6 @@ img.logo-large {
 
 .sign-up-button:hover {
   border: 1px solid #FC575E;
-
 }
 
 
@@ -74,15 +97,6 @@ img.logo-large {
 
 header {
 	border-bottom: dotted 1px #999;
-}
-
-div#main-content {
-	width: 1000px;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #353535;	
-	padding-top: 25px;
 }
 
 .header-content {
@@ -122,7 +136,7 @@ nav li {
 	display: inline-block;
 }
 
-a {
+header a {
 	text-decoration: none;
 	display: inline-block;	
 	color: #eee;
@@ -208,8 +222,23 @@ ul.dropdown li a {
   height: 800px;
 }
 
+a.user {
+  padding: 0;
+  float: left;
+  line-height: 35px;
+}
+
+.stats a {
+  padding: 0 10px 0 0;
+  line-height: 40px;
+}
+
+.stats a:hover {
+  color: #aaa;
+}
+
 .bio {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 ul.audio {
@@ -242,7 +271,7 @@ div.info {
   width: 180px;
   margin-left: 5px; 
   word-wrap: break-word;
-
+  overflow: hidden;
 }
 
 h2 {
@@ -261,7 +290,6 @@ a.update {
   line-height: 20px;
   font-weight: 100;
   border-bottom: 1px solid #F7B42C;
-
 }
 
 a.update:hover {
@@ -306,20 +334,42 @@ label {
   padding-bottom: 5px;
 }
 
-input.button {
+.button {
   width: 150px;
   height: 25px;
   padding-bottom: 4px;
-  margin-top: 5px;
-  background-color: #FC575E;
-  color: #FEDDDF;
+  margin: 5px 0 5px 0;
   font-size: 0.8em;
   text-decoration:none;
   border: none;
+  cursor: pointer;
 }
 
+.form-element .button {
+
+  width: 300px;
+}
+
+.button.red {
+  background-color: #FC575E;
+  color: #FEDDDF;
+}
+
+.button.green {
+  background-color: #AAD450;
+  color: #FDF0D5;
+}
 
 /*--users index---------------*/
+
+.users-wrapper {
+  padding: 0 40px 0 40px;
+}
+
+.show-follow-wrapper {
+  float: left;
+  width: 650px;
+}
 
 .pagination-wrapper {
   width:100%;
@@ -327,7 +377,7 @@ input.button {
 }
 
 ul.users {
-  padding: 0 40px 0 40px;
+  padding: 0
 }
 
 
@@ -379,7 +429,6 @@ li.playing .play-pause {
 
 .play {
 	background-image: url('play.png');
-
 }
 
 .pause {
@@ -417,6 +466,18 @@ li.track a.delete:hover {
   color: #DC373E;
 }
 
+li.track a.user-name {
+  font-size: .7em;
+  padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	vertical-align: center;
+}
+
+li.track a img {
+  vertical-align: middle;
+}
+
 .progress-bar {
 	background-color: #aaa;
 	margin-top: 3px;
@@ -443,6 +504,7 @@ li.track span.progress {
 
 .pagination a {
   line-height: 30px;
+  display: inline-block;
   border-left: 1px solid #353535;
   border-right: 1px solid #353535;  
   margin-left: 0;
@@ -473,8 +535,6 @@ div.pagination em.current {
   display: inline-block;  
   line-height: 30px;
   padding: 0 10px;
-  
-  
 }
 
 /*-- errors --------------------*/
@@ -508,10 +568,25 @@ div.field_with_errors {
   margin-left: auto;
   margin-right: auto;
   padding-top: 18px;
-  background-color: #AAD450;
   color: #444;
 }
 
+a.flash {
+  padding: 0;
+  line-height: 1em;
+}
+
+a.flash:hover {
+  color: #aaa;
+}
+
+.alert-error {
+  background-color: #FC575E;
+}
+
+.alert-success {
+  background-color: #AAD450;
+}
 
 /*-- footer --------------------*/
 footer {
@@ -527,6 +602,7 @@ footer {
 
 .footer-content a {
   float: right;
+  margin: 7px 0;
 }
 
 .footer-content a:hover {

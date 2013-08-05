@@ -2,9 +2,18 @@
   <div class = "play play-pause"></div>
   <div class = "pause play-pause"></div>
   <span class = "title"><%= track.title %></span>
-  <span class = "created_at">submitted <%= time_ago_in_words(track.created_at) %> ago.</span>
-  <% if track.user_id == current_user.id %>
+  <span class = "created_at">
+    submitted 
+    <%= time_ago_in_words(track.created_at) %> ago
+    <% unless track.user_id == @user.id %>
+      by
+    <% end %>
+  </span>
+  <% if track.user_id == @user.id %>
     <%= link_to "delete", track_path(track), class: "delete", method: :delete  %>
+  <% else %>
+    <%= link_to gravatar_for(track.user, size: 18), track.user %>
+    <%= link_to track.user.name, track.user, class: "user-name" %>
   <% end %>
   <span class = "timer"></span> 
   <div class = "progress-bar"><span class = "progress"></span></div>

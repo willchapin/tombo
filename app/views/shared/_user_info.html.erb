@@ -1,7 +1,7 @@
 <h1 class = "pull-left">
-  <%= gravatar_for @user, size: 100 %>
+  <%= link_to gravatar_for(@user, size: 100), user_path(@user), class: "user" %>
   <div class = "info">
-    <h4><%= @user.name %></h4>
+    <h4><%= link_to @user.name, user_path(@user), class: "user" %></h4>
     <% if current_user == @user %>
       <%= link_to "update profile", edit_user_path(@user), class: 'update' %>
     <% end %>

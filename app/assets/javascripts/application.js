@@ -17,11 +17,11 @@
 $(document).ready(function(){
 
   // Header dropdown menu ------------------------------------
+
   $(".dropdown-toggle").click(function(event){
     $("ul.dropdown").toggleClass("show");
     event.stopPropagation();
   });
-
 
   $('html').click(function(){
     $("ul.dropdown").removeClass("show"); 
@@ -29,9 +29,9 @@ $(document).ready(function(){
 
 
   // Audio player -------------------------------------
-  
+
 	var tracks = $('audio');		
-  
+
   $(".play").click(function(){
     pauseAll(tracks);
     $(this).parent("li.track").addClass("playing");
@@ -96,10 +96,6 @@ $(document).ready(function(){
     })
   }
 
-  //initializeTimers();
-
-
-
   // Form Validations
 
   $("input[type='text']").blur(function(){
@@ -147,10 +143,9 @@ $(document).ready(function(){
       $error.html("");
 
     } else {
-      $error.html("invalid email");
+      $error.html("invalid email.");
 
-    } 
-
+    }
   }
 
   function validatePassword(element) {
@@ -162,13 +157,10 @@ $(document).ready(function(){
       $error.html("");
 
     } else {
-      $error.html("password must be 6 characters or more. no spaces");
+      $error.html("password must be 6 characters or more. no spaces.");
 
-    } 
-
-
+    }
   }
-
 
   function validateConfirmation(element) {
     console.log(element.val());
@@ -179,10 +171,9 @@ $(document).ready(function(){
       $error.html("");
 
     } else {
-      $error.html("confirmation must match password");
+      $error.html("confirmation must match password.");
 
-    } 
-
+    }
   }
 
   function isEmpty(val) {
@@ -190,7 +181,6 @@ $(document).ready(function(){
     var emptyString = /^\s*$/;
     if (emptyString.test(val)) return true; 
     else return false;
-
   }
 
   function isValidEmail(email) {
@@ -199,21 +189,17 @@ $(document).ready(function(){
 
     if (validEmail.test(email)) return true;
     else return false;
-
   }
 
   function isValidPassword(password) {
 
     if (password.length > 5 && password.indexOf(" ") == -1 ) return true;
     else return false;
-
   }
 
   function doesConfirmationMatch(confirmation) {
     var password = $('#user_password').val();
     if (confirmation == password) return true;
-    else return false;
-    
+    else return false; 
   }
-
 });
