@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130804232840) do
+ActiveRecord::Schema.define(:version => 20130809002716) do
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20130804232840) do
     t.datetime "track_file_updated_at"
   end
 
+  add_index "tracks", ["id"], :name => "index_tracks_on_id", :unique => true
   add_index "tracks", ["user_id", "created_at"], :name => "index_tracks_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
