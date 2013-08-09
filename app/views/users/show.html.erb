@@ -23,6 +23,8 @@
     <% @user.tracks.each do |track| %>
       <%= render 'tracks/track', track: track %>
     <% end %>
+  <% else %>
+    <%= render 'shared/no_tracks' %>
   <% end %>
   </ul>
 </div>
