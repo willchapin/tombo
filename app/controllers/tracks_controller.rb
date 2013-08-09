@@ -5,6 +5,7 @@ class TracksController < ApplicationController
 
   def create
     @track = current_user.tracks.build(params[:track])
+    puts params[:track]
     if @track.save
       flash[:success] = "Upload Successful!"
       redirect_to root_path
