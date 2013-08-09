@@ -1,11 +1,10 @@
 class TracksController < ApplicationController
 
-  before_filter :signed_in_user, only: [:delete]
+  before_filter :signed_in_user
   before_filter :authorized, only: [:delete]
 
   def create
     @track = current_user.tracks.build(params[:track])
-    puts params[:track]
     if @track.save
       flash[:success] = "Upload Successful!"
       redirect_to root_path
@@ -26,14 +25,8 @@ class TracksController < ApplicationController
   private
 
     def authorized
-      @track = Track.find(params[:id])
-      @user = @track.user
-      redirect_to root_path unless current_user?(@user)
+      @track = current_user.tracks.find_by_id(params[:id])
+      redirect_to root_path if @track.nil?
     end
-
-    def signed_in_user
-      redirect_to signin_path unless signed_in? 
-    end
-
 
 end

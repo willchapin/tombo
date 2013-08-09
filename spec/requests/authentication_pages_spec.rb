@@ -113,11 +113,6 @@ describe "Authentication" do
           before { post tracks_path }
           specify { response.should redirect_to(signin_url) }
         end
-
-        describe "submitting to the destroy action" do
-          before { delete tracks_path(FactoryGirl.create(:track)) }
-          specify { response.should redirect_to(signin_url) }
-        end
       end
 
       describe "in the Relationships controller" do
