@@ -1,5 +1,5 @@
 <h2>Add a track</h2>
-<%= form_for @track do |f| %>
+<%= form_for @track, remote: true do |f| %>
   <div class = "form-element">
     <%= f.label :title %>
     <%= f.text_field :title, class: "track" %>
