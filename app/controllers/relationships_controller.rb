@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
     current_user.follow!(@user)
     respond_to do |format|
       format.html { redirect_to @user }
-      format.js
+      format.js { puts "hey!" }
     end
   end
 
