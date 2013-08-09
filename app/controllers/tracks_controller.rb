@@ -6,7 +6,7 @@ class TracksController < ApplicationController
   def create
     @track = current_user.tracks.build(params[:track])
     if @track.save
-      flash[:success] = "Upload Successfull!"
+      flash[:success] = "Upload Successful!"
       redirect_to root_path
     else
       flash[:error] = "I'm sorry, please upload your track in .ogg format."

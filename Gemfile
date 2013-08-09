@@ -14,11 +14,14 @@ gem 'aws-sdk'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :production do
   gem 'pg'
 end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

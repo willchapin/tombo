@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  before_filter :authorized, only: [:edit, :update]
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
+  before_filter :authorized, only: [:edit, :update]
   before_filter :admin_user, only: [:destroy]
 
   def new
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Tombo welcomes you!"
+      flash[:success] = "Hi, #{@user.name}. Welcome to Tombo!"
       redirect_to root_path
     else 
       render 'new'

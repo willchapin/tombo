@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   private
 
     def signed_in_user
-      redirect_to signin_path unless signed_in? 
+      unless signed_in?
+        store_location
+        redirect_to signin_path
+      end
     end
 end

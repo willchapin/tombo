@@ -2,7 +2,7 @@ class Track < ActiveRecord::Base
   attr_accessible :title, :track_file
   has_attached_file :track_file,
                     url: ':s3_domain_url',
-                    path: 'assets/:class/:id/:filename',
+                    path: "assets/#{Rails.env}/:class/:id/:filename",
                     storage: :s3,
                     s3_credentials: File.join(Rails.root, 'config', 'aws.yml')
 
