@@ -10,6 +10,7 @@ Tongo::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :tracks,   only: [:create, :destroy, :show, :edit, :update]
   resources :relationships,  only: [:create, :destroy]
+  resources :comments,  only: [:new, :create, :destroy]
 
 
   match '/signup',   to: 'users#new'

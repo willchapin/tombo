@@ -1,4 +1,15 @@
 <div class = "comment-wrap">
   <h1>Comments</h1>
-
+  <% unless current_user?(@user) %>
+    <%= render 'comments/comment_form'%>
+  <% end %>
+  <ul class = "comments">
+    <% if @track.comments.empty? %>
+      <p>No one has commented on this track.</p>
+    <% else %>
+      <%= @track.comments do |comment| %>
+        <%= render 'comment', comment: comment %>
+      <% end %>
+    <% end %>
+  </ul>
 </div>

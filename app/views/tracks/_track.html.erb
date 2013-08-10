@@ -11,7 +11,6 @@
   </span>
   <% if track.user_id == @user.id %>
     <%= link_to "delete", track_path(track), class: "delete", method: :delete  %>
-    <%= link_to "edit", edit_track_path(track), class: "edit" %>
   <% else %>
     <%= link_to gravatar_for(track.user, size: 18), track.user %>
     <%= link_to track.user.name, track.user, class: "user-name" %>

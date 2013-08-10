@@ -1,0 +1,6 @@
+<%= form_for @comment do |f| %>
+  <%= f.text_area :content, placeholder: "Leave a comment...", class: "comment-box" %>
+  <%= f.hidden_field :track_id, value: @track.id %>
+  <%= f.submit "Submit Comment", class: "button red" %>
+<% end %>
+

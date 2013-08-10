@@ -6,6 +6,7 @@ class Track < ActiveRecord::Base
                     storage: :s3,
                     s3_credentials: File.join(Rails.root, 'config', 'aws.yml')
 
+  has_many :comments, dependent: :destroy
   belongs_to :user
   default_scope order: 'created_at DESC'
   validates :user_id, presence: true

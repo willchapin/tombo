@@ -252,6 +252,7 @@ ul.audio {
 }
 
 .audio-wrap {
+  width: 650px;
   float: right;
   padding-right: 15px;
 }
@@ -272,6 +273,19 @@ ul.audio {
 .comment-wrap {
   width: 46%;
   float: right;
+}
+
+.comment-box {
+  margin-top: 16px;
+  width: 287px;
+  padding: 5px;
+  height: 100px;
+  background-color: #aaa;
+  border: none;
+}
+
+.comment-box:focus {
+  background-color: #fff;
 }
 
 

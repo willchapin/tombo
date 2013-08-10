@@ -17,6 +17,7 @@ class TracksController < ApplicationController
   def show
     @track = Track.find(params[:id])
     @user = User.find(@track.user)
+    @comment = current_user.comments.build
   end
 
   def destroy
