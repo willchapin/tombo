@@ -1,0 +1,9 @@
+<div class = "sidebar">
+  <%= render 'shared/user_info' %>
+  <%= render 'shared/stats' %>
+  <% if current_user?(@user) && @user.bio.nil? %>
+    <%= link_to 'add a bio!', edit_user_path(current_user) %>
+  <% else %>
+    <%= render 'shared/user_bio' %>
+  <% end %>
+</div>

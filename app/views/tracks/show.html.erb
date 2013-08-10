@@ -1,0 +1,9 @@
+<% provide(:title, @track.title) %>
+<%= render 'shared/show_sidebar' %>
+<div class = "audio-wrap">
+  <%= render 'track', track: @track %>
+</div>
+<div class = "track-content-wrap">
+  <%= render 'description' %>
+  <%= render 'comments' %>
+</div>

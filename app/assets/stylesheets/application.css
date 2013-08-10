@@ -51,7 +51,8 @@ h1 {
   text-align: center;
 }
 
-#form-wrap h1, #about-wrap h1 {
+#form-wrap h1, #about-wrap h1,
+.description-wrap h1, .comment-wrap h1 {
   border-bottom: 1px solid #90D5EC; 
   padding-bottom: 5px;
 }
@@ -251,8 +252,29 @@ ul.audio {
 }
 
 .audio-wrap {
-  float:left;
+  float: right;
+  padding-right: 15px;
 }
+
+/*------- tracks ------------------*/
+
+.track-content-wrap {
+  float: right;
+  padding-right: 15px;
+  width: 650px;
+}
+
+.description-wrap {
+  width: 46%;
+  float: left;
+}
+
+.comment-wrap {
+  width: 46%;
+  float: right;
+}
+
+
 
 /*------- home ------------------*/
 

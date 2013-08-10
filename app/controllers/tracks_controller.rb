@@ -1,7 +1,7 @@
 class TracksController < ApplicationController
 
   before_filter :signed_in_user
-  before_filter :authorized, only: [:delete]
+  before_filter :authorized, only: [:delete, :update]
 
   def create
     @track = current_user.tracks.build(params[:track])
@@ -12,7 +12,11 @@ class TracksController < ApplicationController
       flash[:error] = "I'm sorry, please upload your track in .ogg format."
       redirect_to root_path
     end
+  end
 
+  def show
+    @track = Track.find(params[:id])
+    @user = User.find(@track.user)
   end
 
   def destroy
@@ -21,6 +25,18 @@ class TracksController < ApplicationController
    redirect_to root_path
   end
 
+  def edit
+    @track = Track.find(params[:id])
+  end
+
+  def update
+    if @track.update_attributes(params[:track])
+      flash[:success] = "#{@track.title} updated!"
+      redirect_to track_path
+    else 
+      render 'edit'
+    end
+  end
 
   private
 

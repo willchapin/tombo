@@ -1,8 +1,8 @@
 <li class = "track">
   <div class = "play play-pause"></div>
   <div class = "pause play-pause"></div>
-  <span class = "title"><%= track.title %></span>
-  <span class = "created_at">
+    <%= link_to track.title, track_path(track), class: :title %>
+    <span class = "created_at">
     submitted 
     <%= time_ago_in_words(track.created_at) %> ago
     <% unless track.user_id == @user.id %>
@@ -11,6 +11,7 @@
   </span>
   <% if track.user_id == @user.id %>
     <%= link_to "delete", track_path(track), class: "delete", method: :delete  %>
+    <%= link_to "edit", edit_track_path(track), class: "edit" %>
   <% else %>
     <%= link_to gravatar_for(track.user, size: 18), track.user %>
     <%= link_to track.user.name, track.user, class: "user-name" %>

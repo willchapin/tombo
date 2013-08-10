@@ -1,13 +1,5 @@
 <% provide(:title, @user.name) %>
-<div class = "sidebar">
-  <%= render 'shared/user_info' %>
-  <%= render 'shared/stats' %>
-  <% if current_user?(@user) && @user.bio.nil? %>
-    <%= link_to 'add a bio!', edit_user_path(current_user) %>
-  <% else %>
-    <%= render 'shared/user_bio' %>
-  <% end %>
-</div>
+<%= render 'shared/show_sidebar' %>
 <div class = "audio-wrap">
   <% if signed_in? && !current_user?(@user) %>
     <div id = "follow_form">

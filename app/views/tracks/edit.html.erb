@@ -1,0 +1,23 @@
+<% provide :title, "Update #{@track.title}" %>
+<div id = "form-wrap">
+  <h1>Update <%= @track.title %></h1>
+  <%= form_for @track do |f| %>
+
+    <div class="form-element">
+      <%= f.label :title  %>
+      <%= f.text_field :title  %>
+      <span class = "error"></span>
+    </div>
+
+    <div class="form-element">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <span class = "error"></span>
+    </div>
+
+    <div class="form-element">
+      <%= f.submit "Update!", class: "button red" %>
+    </div>
+
+  <% end %>
+</div>

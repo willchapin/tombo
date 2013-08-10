@@ -1,0 +1,11 @@
+<div class = "description-wrap">
+  <h1>Track description</h1>
+  <% if current_user?(@user) && @track.description.nil? %>
+    <%= link_to "Add a description for #{@track.title}.",
+                 edit_track_path %>
+  <% elsif !@track.description.nil? %>
+    <p>
+      <%= @track.description %>
+    </p>
+  <% end %>
+</div>
