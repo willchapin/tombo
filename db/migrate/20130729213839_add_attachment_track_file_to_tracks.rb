@@ -1,6 +1,6 @@
 class AddAttachmentTrackFileToTracks < ActiveRecord::Migration
   def self.up
-    add_attachment :track, :track_file
+    add_attachment :tracks, :track_file
   end
 
   def self.down
