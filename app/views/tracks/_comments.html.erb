@@ -7,7 +7,7 @@
     <% if @track.comments.empty? %>
       <p>No one has commented on this track.</p>
     <% else %>
-      <%= @track.comments do |comment| %>
+      <% @track.comments.each do |comment| %>
         <%= render 'comment', comment: comment %>
       <% end %>
     <% end %>

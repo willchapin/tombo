@@ -1,0 +1,6 @@
+<li class = comment>
+  <%= link_to gravatar_for(comment.user, size: 55), user_path(comment.user) %>
+  <%= link_to comment.user.name, user_path(comment.user), class: "name" %>
+  <span class = "time"><%= time_ago_in_words(comment.created_at) %> ago. </span>
+  <p><%= comment.content %></p>
+</li>

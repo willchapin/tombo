@@ -3,9 +3,9 @@ class CommentsController < ApplicationController
   end
 
   def create
+    puts params
     @comment = current_user.comments.build(params[:comment])
     if @comment.save
-      flash[:success] = "Upload Successful!"
     else
       flash[:error] = "Your comment must be under 200 characters and can't be blank."
     end

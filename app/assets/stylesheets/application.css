@@ -266,18 +266,28 @@ ul.audio {
 }
 
 .description-wrap {
-  width: 46%;
-  float: left;
+  width: 100%;
+  display: block;
+}
+
+.description-wrap h1 {
+  border-bottom: 1px solid #90D5EC;
 }
 
 .comment-wrap {
-  width: 46%;
-  float: right;
+  width: 100%;
+  display: block;
+}
+
+.comment-wrap h1{
+  border-bottom: 1px solid #F7B42C;
 }
 
 .comment-box {
   margin-top: 16px;
-  width: 287px;
+  margin-bottom: 0px;
+  display: block;
+  width: 50%;
   padding: 5px;
   height: 100px;
   background-color: #aaa;
@@ -286,6 +296,46 @@ ul.audio {
 
 .comment-box:focus {
   background-color: #fff;
+}
+
+.comment-wrap .button {
+  margin-bottom: 30px;
+}
+
+
+/*------- comments ------------------*/
+ul.comments {
+  padding: 0;
+  
+}
+
+ul.comments li {
+  margin: 20px 0;
+  border-bottom: 1px solid #474747;
+}
+.comment img {
+}
+
+span.time {
+  color: #bbb;
+  font-size: .9em;
+  font-weight: light;
+  vertical-align: top; 
+  margin-left: 10px;
+}
+
+.comment a {
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.comment a.name {
+  border-bottom: 1px solid #AAD450;
+}
+
+.comment p {
+  margin: 0;
 }
 
 
