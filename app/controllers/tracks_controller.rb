@@ -35,6 +35,7 @@ class TracksController < ApplicationController
       flash[:success] = "#{@track.title} updated!"
       redirect_to track_path
     else 
+      flash[:error] = "Description can't be longer than 255 characters"
       render 'edit'
     end
   end

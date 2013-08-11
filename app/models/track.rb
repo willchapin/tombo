@@ -10,6 +10,7 @@ class Track < ActiveRecord::Base
   belongs_to :user
   default_scope order: 'created_at DESC'
   validates :user_id, presence: true
+  validates :description, length: { maximum: 255 }
   validates_attachment :track_file, presence: true,
     content_type: { content_type: /(video|audio)\/ogg/i }
 
