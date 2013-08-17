@@ -18,4 +18,11 @@ FactoryGirl.define do
                          'audio/ogg')
     end
   end
+
+  factory :comment do
+    user_id 1
+    content "MyString"
+    track_id 1
+  end
+
 end

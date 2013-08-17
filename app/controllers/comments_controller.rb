@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    puts params
     @comment = current_user.comments.build(params[:comment])
     if @comment.save
     else
