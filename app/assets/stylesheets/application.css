@@ -540,16 +540,30 @@ li.track span.timer {
   font-size: .8em;
 }
 
-li.track a.delete {
+li.track a.options {
   line-height: 30px;
+  padding: 0 0 0 10px;
   font-size: .8em;
   font-weight: 100;
+}
+
+li.track a.delete {
   color: #FC575E;
 }
 
 li.track a.delete:hover {
   color: #DC373E;
 }
+
+li.track a.edit {
+  color: #F7B42C;
+}
+
+li.track a.edit:hover {
+  color: #D7940C;
+}
+
+
 
 li.track a.user-name {
   font-size: .7em;
