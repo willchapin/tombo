@@ -5,6 +5,6 @@ class Comment < ActiveRecord::Base
 
   default_scope order: 'created_at DESC'
 
-  validates :content, presence: true, length: { maximum: 200, minimum: 0 }
+  validates :content, presence: true, length: { maximum: 200 }
   validates :user_id, presence: true
 end
