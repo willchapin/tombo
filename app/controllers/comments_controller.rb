@@ -12,5 +12,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+   @comment = Comment.find(params[:id]).delete
+   flash[:success] = "Comment has been deleted!"
+   redirect_to track_path(@comment.track)
   end
 end

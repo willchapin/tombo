@@ -320,7 +320,7 @@ span.time {
   color: #bbb;
   font-size: .9em;
   font-weight: light;
-  vertical-align: top; 
+  vertical-align: middle; 
   margin-left: 10px;
 }
 
@@ -338,6 +338,18 @@ span.time {
   margin: 0;
 }
 
+li.comment a.delete {
+  line-height: 30px;
+  vertical-align: middle; 
+  padding: 0 0 0 10px;
+  font-size: .8em;
+  font-weight: 100;
+  color: #FC575E;
+}
+
+li.comment a.delete:hover {
+  color: #DC373E;
+}
 
 
 /*------- home ------------------*/
