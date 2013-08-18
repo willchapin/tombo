@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+
+  before_filter :signed_in_user
+  before_filter :authorized, only: [:destroy]
+
   def new
   end
 
@@ -12,8 +16,16 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-   @comment = Comment.find(params[:id]).delete
+   @comment.delete
    flash[:success] = "Comment has been deleted!"
    redirect_to track_path(@comment.track)
   end
+
+
+  private
+
+    def authorized
+      @comment = current_user.comments.find_by_id(params[:id])
+      redirect_to root_path if @comment.nil?
+    end
 end
