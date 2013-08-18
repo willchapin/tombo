@@ -11,6 +11,7 @@ describe Track do
   subject { @track }
 
   it { should respond_to(:track_file) }
+  it { should respond_to(:comments) }
   it { should respond_to(:user_id) }
   it { should respond_to(:user) }
   its(:user) { should == user }

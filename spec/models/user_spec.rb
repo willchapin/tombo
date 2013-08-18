@@ -21,6 +21,7 @@ describe User do
   it { should respond_to(:bio) }
   it { should respond_to(:feed) }
   it { should respond_to(:relationships) }
+  it { should respond_to(:comments) }
   it { should respond_to(:followed_users) }
   it { should respond_to(:reverse_relationships) }
   it { should respond_to(:followers) }
