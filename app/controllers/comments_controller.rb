@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(params[:comment])
     if @comment.save
     else
-      flash[:error] = "Your comment must be under 200 characters and can't be blank."
+      flash[:error] = "Your comment must be under 2000 characters and can't be blank."
     end
       redirect_to track_path(@comment.track)
   end
