@@ -11,7 +11,11 @@
   </span>
   <% if track.user == current_user %>
     <%= link_to "edit", edit_track_path(track), class: "options edit" %>
-    <%= link_to "delete", track_path(track), class: "options delete", method: :delete  %>
+    <%= link_to "delete", track_path(track),
+                 class: "options delete",
+                 method: :delete,
+                 data: { confirm: "Are you sure you want to delete? " +
+                                   "This action cannot be undone." } %>
   <% elsif params[:controller] == 'static_pages' and params[:action] == 'home' %>
     <%= link_to gravatar_for(track.user, size: 18), track.user %>
     <%= link_to track.user.name, track.user, class: "user-name" %>
