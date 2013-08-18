@@ -22,7 +22,7 @@ class TracksController < ApplicationController
 
   def destroy
    @track = Track.find(params[:id]).delete
-   flash[:success] = "#{@track.title} has been deleted!"
+   flash[:success] = "'#{@track.title}' has been deleted!"
    redirect_to root_path
   end
 
@@ -32,7 +32,7 @@ class TracksController < ApplicationController
 
   def update
     if @track.update_attributes(params[:track])
-      flash[:success] = "#{@track.title} updated!"
+      flash[:success] = "'#{@track.title}' updated!"
       redirect_to track_path
     else 
       flash[:error] = "Description can't be longer than 255 characters"
