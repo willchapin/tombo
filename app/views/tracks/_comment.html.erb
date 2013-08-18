@@ -3,7 +3,12 @@
   <%= link_to comment.user.name, user_path(comment.user), class: "name" %>
   <span class = "time"><%= time_ago_in_words(comment.created_at) %> ago </span>
   <% if comment.user == current_user %>
-    <%= link_to "delete this comment", comment_path(comment.id), class: "delete", method: :delete %>
+    <%= link_to "delete this comment",
+                 comment_path(comment.id),
+                 class: "delete",
+                 method: :delete,
+                 data: { confirm: "Are you sure you want to delete this comment? " +
+                                  "This action cannot be undone." } %>
   <% end %>
   <p><%= comment.content %></p>
 </li>
