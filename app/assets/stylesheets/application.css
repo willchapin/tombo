@@ -146,40 +146,32 @@ header a {
 	text-decoration: none;
 	display: inline-block;	
 	color: #eee;
-	height: 100%;
-	line-height: 58px;
-	text-align: middle;
-	padding: 0 10px;
-  margin: 0;
+	padding: 0;
+  margin: 20px 10px 0 10px;
 }
 
 .pull-right {
 	float: right;
 }
 
+header a:hover {
+	color: #eee;
+}
+
 a.orange:hover {
-	background-color: #F7B42C;
-	color: #FDF0D5;
+	border-bottom: 1px solid #F7B42C;
 }
 
 a.red:hover {
-	background-color: #FC575E;
-	color: #FEDDDF;
+	border-bottom: 1px solid #FC575E;
 }
 
 a.blue:hover {
-	background-color: #90D5EC;
-	color: #E9F7FB;
+	border-bottom: 1px solid #90D5EC;
 }
 
 a.green:hover {
-  background-color: #AAD450;
-	color: #FDF0D5;
-}
-
-a.purple:hover {
-  background-color: #657DAF;
-	color: #E9F7FB;
+  border-bottom: 1px solid #AAD450;
 }
 
 /*------- dropdown menu ------------*/
@@ -187,10 +179,6 @@ a.purple:hover {
 div.dropdown {
   float:right;
   position: relative;
-}
-
-a.dropdown-toggle:hover{ 
-  color: #aaa;
 }
 
 ul.dropdown {
@@ -216,6 +204,7 @@ ul.dropdown li a {
   line-height: 50px;
   vertical-align: middle;
   border-bottom: 1px dotted #999;
+  margin: 0;
 }
 
 
@@ -724,7 +713,11 @@ footer {
 
 .footer-content a {
   float: right;
-  margin: 7px 0;
+	text-decoration: none;
+	display: inline-block;	
+	color: #eee;
+	padding: 0;
+  margin: 20px 10px 0 10px;
 }
 
 .footer-content a:hover {
