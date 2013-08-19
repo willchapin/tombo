@@ -20,6 +20,12 @@ describe "Static pages" do
         visit root_path
       end
 
+      describe "drop-down-menu" do
+        it { should have_link('sign out', href: signout_path) }
+        it { should have_link('profile', href: user_path(user)) }
+        it { should have_link('update', href: edit_user_path(user)) }
+      end
+
       it "should render the user's feed" do
         user.feed.each do |item|
           page.should have_selector("a", text: item.title)
