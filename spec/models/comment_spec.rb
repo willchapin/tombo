@@ -4,7 +4,8 @@ describe Comment do
   let(:user) { FactoryGirl.create(:user) }
 
   before do 
-    @track = user.tracks.build(title: 'test123',
+    @track = user.tracks.new(
+                     title: 'test123',
                      track_file: fixture_file_upload('/test.ogg', 'audio/ogg'))
     @track.save
     @comment = user.comments.build(content: "test comment", track_id: @track.id)

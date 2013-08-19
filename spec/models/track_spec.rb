@@ -5,7 +5,7 @@ describe Track do
   let(:user) { FactoryGirl.create(:user) }
 
   before do 
-    @track = user.tracks.build(title: 'test123',
+    @track = user.tracks.new(title: 'test123',
                      track_file: fixture_file_upload('/test.ogg', 'audio/ogg'))
   end
   subject { @track }

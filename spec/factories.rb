@@ -14,7 +14,7 @@ FactoryGirl.define do
   factory :track do
     sequence(:title) { |n| "Test Track #{n}" }
     track_file do 
-      fixture_file_upload(Rails.root.join('spec', 'tracks', 'test.ogg'),
+      fixture_file_upload(Rails.root.join('spec', 'fixtures', 'test.ogg'),
                          'audio/ogg')
     end
   end

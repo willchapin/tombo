@@ -15,9 +15,4 @@ class ApplicationController < ActionController::Base
         redirect_to signin_path
       end
     end
-
-    def authorized
-      @track = current_user.tracks.find_by_id(params[:id])
-      redirect_to root_path if @track.nil?
-    end
 end
