@@ -35,5 +35,17 @@ describe Track do
     before { @track.track_file = nil }
     it { should_not be_valid }
   end
+
+  describe "when track description is too long" do 
+    before { @track.description = 'a' * 3001 }
+    it { should_not be_valid }
+  end
+
+  describe "when audio type is not correct" do
+    before { @track.track_file = fixture_file_upload('/test.ogg', 'audio/mp3') }
+    it { should_not be_valid }
+  end
+
+  
 end
 
