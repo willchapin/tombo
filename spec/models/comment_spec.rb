@@ -35,6 +35,11 @@ describe Comment do
     it { should_not be_valid }
   end
 
+  describe "when track_id is not present" do
+    before { @comment.track_id = nil }
+    it { should_not be_valid }
+  end
+
   describe "content" do
     describe "when content is not present" do
       before { @comment.content = nil }

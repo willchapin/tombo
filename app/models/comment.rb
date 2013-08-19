@@ -7,4 +7,5 @@ class Comment < ActiveRecord::Base
 
   validates :content, presence: true, length: { maximum: 2000 }
   validates :user_id, presence: true
+  validates :track_id, presence: true
 end
