@@ -85,9 +85,55 @@ describe "User pages" do
     it { should have_selector('h1', text: user.name) }
     it { should have_selector('title', text: user.name) }
 
-    describe "microposts" do
+    describe "tracks" do
       it { should have_content(t1.title) }
       it { should have_content(t2.title) }
+
+      describe "edit links" do
+        describe "when not signed in" do
+          it { should_not have_link('edit', href: edit_track_path(t1)) }
+          it { should_not have_link('edit', href: edit_track_path(t1)) }
+        end
+
+        describe "when signed in" do
+          before { sign_in user }
+          it { should have_link('edit', href: edit_track_path(t1)) }
+          it { should have_link('edit', href: edit_track_path(t2)) }
+          describe "should lead to the track update page" do
+            before { click_link('edit') }
+            it { should have_selector('title', text: 'Update Track') }
+          end
+        end
+      end
+
+      describe "delete links" do
+        describe "when not signed in" do
+          it { should_not have_link('delete', href: track_path(t1)) }
+          it { should_not have_link('delete', href: track_path(t2)) }
+        end
+
+        describe "when signed in" do
+          before { sign_in user }
+          it { should have_link('delete', href: track_path(t1)) }
+          it { should have_link('delete', href: track_path(t2)) }
+          it "should decrement the user's track count" do
+            expect do
+              click_link('delete')
+            end.to change(user.tracks, :count).by(-1)
+          end
+        end
+      end
+
+    end
+
+    describe "update profile link" do
+      describe "when not signed in" do
+        it { should_not have_link('update profile', href: edit_user_path(user)) }
+      end
+      describe "when signed in" do
+        before { sign_in user }
+        it { should have_link('update profile', href: edit_user_path(user)) }
+      end
     end
 
     describe "follow/unfollow buttons" do
@@ -211,9 +257,12 @@ describe "User pages" do
     describe "with valid information" do
       let(:new_name) { "New Name" }
       let(:new_email) { "new@example.com" }
+      let(:new_bio) { Faker::Lorem.paragraph(2) }
+
       before do
         fill_in "Name", with: new_name
         fill_in "Email", with: new_email
+        fill_in "Bio", with: new_bio
         fill_in "Password", with: user.password
         fill_in "Confirm", with: user.password
         click_button "Update!"
@@ -224,6 +273,7 @@ describe "User pages" do
       it { should have_link('sign out', href: signout_path) }
       specify { user.reload.name.should == new_name }
       specify { user.reload.email.should == new_email }
+      specify { user.reload.bio.should == new_bio }
     end
   end
 
