@@ -123,7 +123,6 @@ describe "User pages" do
           end
         end
       end
-
     end
 
     describe "update profile link" do

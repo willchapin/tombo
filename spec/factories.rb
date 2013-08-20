@@ -5,7 +5,7 @@ FactoryGirl.define do
     sequence(:email) { |n| "person_#{n}@example.com"}
     password "foobar"
     password_confirmation "foobar"
-
+    bio Faker::Lorem.paragraph(3)
     factory :admin do
       admin true
     end
@@ -17,6 +17,7 @@ FactoryGirl.define do
       fixture_file_upload(Rails.root.join('spec', 'fixtures', 'test.ogg'),
                          'audio/ogg')
     end
+    description Faker::Lorem.paragraph(3)
   end
 
   factory :comment do
