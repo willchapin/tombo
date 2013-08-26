@@ -22,6 +22,7 @@ describe "Track pages" do
 
     it { should have_selector('title', text: 'Track') }
     it { should have_link(track.title, href: track_path(track)) }
+    it { should have_link('download', href: download_track_path(track)) }
     it { should have_selector('p', text: track.description) }
     it { should have_selector('p', text: track_author.bio) }
     it { should have_selector('p', text: 'No one has commented on this track.') }

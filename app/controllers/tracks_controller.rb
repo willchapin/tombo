@@ -40,6 +40,14 @@ class TracksController < ApplicationController
     end
   end
 
+  def download
+    @track = Track.find(params[:id])
+    data = open(@track.track_file.url)
+    send_data data.read, filename: @track.title + ".ogg",
+                         type: @track.track_file.content_type,
+                         x_sendfile: true
+  end
+
   private
 
     def authorized

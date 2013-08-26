@@ -9,6 +9,7 @@
       by
     <% end %>
   </span>
+  <%= link_to 'download', download_track_path(track), class: "options download" %>
   <% if track.user == current_user %>
     <%= link_to "edit", edit_track_path(track), class: "options edit" %>
     <%= link_to "delete", track_path(track),

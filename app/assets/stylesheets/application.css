@@ -564,6 +564,14 @@ li.track a.edit:hover {
   color: #D7940C;
 }
 
+li.track a.download {
+  color: #90D5EC;
+}
+
+li.track a.download:hover {
+  color: #70B5CC;
+}
+
 
 
 li.track a.user-name {

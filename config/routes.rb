@@ -7,6 +7,13 @@ Tongo::Application.routes.draw do
       get :following, :followers
     end
   end
+  resources :tracks do
+    member do
+      get :download
+    end
+  end
+
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :tracks,   only: [:create, :destroy, :show, :edit, :update]
   resources :relationships,  only: [:create, :destroy]
